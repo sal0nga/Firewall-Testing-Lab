@@ -31,7 +31,7 @@ This lab demonstrated the importance of properly configured firewalls in securin
 ## How to Use
 1. Clone this repository: 
    ```bash
-   git clone <repository-url>
+   git clone git@github.com:sal0nga/Firewall-Testing-Lab.git
 
 
 

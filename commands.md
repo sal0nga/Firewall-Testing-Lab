@@ -1,18 +1,32 @@
-UFW Commands
+# Commands
+The list of commands used in this lab.
 
-sudo ufw staus
-sudo ufw enable
+## Configuring UFW
+- sudo ufw status
+- sudo ufw enable
+- sudo ufw allow 21
+- sudo ufw allow http
+- sudo ufw status verbose
+- sudo ufw deny from [Ubuntu IP] to any port http
+- **List UFW rules with numbers:** sudo ufw status numbered
+- sudo ufw delete deny from [Ubuntu IP] to any port http
+- sudo ufw insert 1 deny from [Ubuntu IP] to any port http
+- sudo ufw reset
 
-sudo ufw allow 21
-sudo ufw allow http
+## Running the Apache Web Server on Kali
+sudo systemctl start apache2
 
-sudo ufw status verbose
+sudo systemctl status apache2
 
-sudo ufw deny from [Ubuntu IP] to any port http
+sudo systemctl stop apache2
 
-sudo ufw status numbered
+## Requesting Web Service on Ubuntu
 
-sudo ufw delete deny from [Ubuntu IP] to any port http
-sudo ufw insert 1 deny from [Ubuntu IP] to any port http
+### Use xhost to allow root access to display:
+xhost +SI:localuser:root
 
-sudo ufw reset
+### To switch to root user:
+sudo su
+
+### To request a web page from the Apache server:
+firefox http://[Kali IP]/index.html

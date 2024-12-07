@@ -164,7 +164,7 @@ The goal of this lab is to explore **network communication** between two virtual
 
 ---
 
-## Observations and Takeaways:
+## Observations:
 - **TCP handshake and HTTP traffic** between the two VMs functioned correctly when the firewall allowed traffic.
 - **Firewall rules** and **apropriate ordering** using UFW were effective in blocking and allowing traffic selectively, such as denying HTTP traffic from the Ubuntu VM.
 - **Wireshark** provided valuable insights into network communication by capturing TCP handshakes, HTTP requests, and Nmap scan results.
